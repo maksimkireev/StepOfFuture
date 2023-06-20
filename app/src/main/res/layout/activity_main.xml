@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="3"
+    android:background="@drawable/tra"
+    android:textAlignment="textEnd"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="439dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="678dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:background="@color/nu"
+            android:onClick="transitionLayout2"
+            app:srcCompat="@drawable/user" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/comic_sans"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="410dp"
+        android:layout_height="215dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            android:id="@+id/steps"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginStart="35dp"
+            android:fontFamily="@font/comic_sans"
+            android:text="@string/loading"
+            android:textColor="@color/white"
+            android:textSize="80sp"
+            android:onClick="click"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:indeterminate="false"
+            android:max="1000"
+            android:minWidth="300dp"
+            android:minHeight="30dp" />
+
+        <TextView
+            android:id="@+id/target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:fontFamily="@font/comic_sans"
+            android:text="@string/loading"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:onClick="clickShowDialog" />
+
+        <TextView
+            android:id="@+id/goal_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:fontFamily="@font/comic_sans"
+            android:onClick="clickShowDialog"
+            android:text="@string/goal_setting"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="410dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <ImageView
+            android:id="@+id/timeImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/time_img" />
+
+        <ImageView
+            android:id="@+id/distationImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/distation_img" />
+
+        <ImageView
+            android:id="@+id/caloriesImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@drawable/calories_img" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="243dp"
+        android:layout_height="410dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.984">
+
+        <TextView
+            android:id="@+id/timeView"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/comic_sans"
+            android:gravity="center"
+            android:text="@string/loading"
+            android:textColor="@color/white"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/distationView"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/comic_sans"
+            android:gravity="center"
+            android:text="@string/loading"
+            android:textColor="@color/white"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/caloriesView"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/comic_sans"
+            android:gravity="center"
+            android:text="@string/loading"
+            android:textColor="@color/white"
+            android:textSize="27sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">step of future</string>
+    <string name="loading">Загрузка...</string>
+    <string name="goal_setting">нажмите чтобы установить цель</string>
+    <string name="dialog_title">Цель на день</string>
+    <string name="dialog_button">Готово</string>
+    <string name="totalTime">Вся статистика указанна за весь период</string>
+    <string name="toolStepCheck">шагов за всё время</string>
+</resources>
